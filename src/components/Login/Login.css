@@ -61,3 +61,8 @@
     gap: 8px;
     margin: 10px;
   }
+
+  .navlink
+  {
+    width: max-content;
+  }

@@ -5,11 +5,10 @@ import TextField from '@mui/material/TextField';
 import { Container, Paper } from '@mui/material';
 import Button from '@mui/material/Button';
 import { PlaylistPlayOutlined } from '@mui/icons-material';
+import './Profile.css';
 
 
 export default function Profile() {
-    const paperStyle={padding:'15px 20px', width:400,margin:"5px"}
-    const [firstName,setFirstName]=useState('')
     const [lastName,setLastName]=useState('')
     const [address,setAddress]=useState('')
     const [phone,setPhone]=useState('')
@@ -32,7 +31,7 @@ export default function Profile() {
 <div>
     { 
     peoplee.map(ppl=>(
-      <Paper elevation={18} key={ppl.id}>
+      <Paper elevation={3} key={ppl.id} className='paper'>
       <b>Id</b>: {ppl.id}<br/>
       <b>First Name</b>: {ppl.firstName}<br/>
      <b>Last Name</b>:{ppl.lastName}<br/>
@@ -40,11 +39,9 @@ export default function Profile() {
      <b>Email</b>:{ppl.email}<br/>
      <b>Phone</b>:{ppl.phone}<br/>
       </Paper>
-    )
-      )
+    ))
     }
-      </div>
-       
+      </div> 
   );
   
 }

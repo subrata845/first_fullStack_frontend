@@ -1,0 +1,54 @@
+/* .app {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: #f8f9fd;
+  }
+   */
+
+Paper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #6c2a2a;
+  }
+  
+  .paper {
+    padding: 20px;
+    width: 350px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  
+  .text-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .button {
+    width: 100%;
+    color: white;
+    background-color: #3f51b5;
+  }
+
+  .button hover{
+    width: 100%;
+    color: white;
+    background-color: #09902f;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }

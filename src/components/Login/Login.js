@@ -5,11 +5,12 @@ import TextField from '@mui/material/TextField';
 import { Container, Paper } from '@mui/material';
 import Button from '@mui/material/Button';
 import { PlaylistPlayOutlined } from '@mui/icons-material';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate, useHistory } from 'react-router-dom';
 import ReactDOM from "react-dom";
-import People from '../Registration/People';
+import People from '../Registration/Registration';
+import Profile from '../Profile/Profile';
 import { BrowserRouter, Router, Route, Routes, Link, useLocation, NavLink } from 'react-router-dom';
-import './Login.css'
+import './Login.css';
 export default function Login() {
 
   // const navigate = useNavigate();
@@ -22,17 +23,13 @@ export default function Login() {
   //   }, []);
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  // const Navigate=useNavigate();
 
   // User Login info
   const database = [
     {
-      username: "user1",
-      password: "pass1"
-    },
-    {
-      username: "user2",
-      password: "pass2"
+      username: "admin",
+      password: "admin"
     }
   ];
 
@@ -87,16 +84,23 @@ export default function Login() {
     </div>
   );
 
+
   return (
     <div className="app">
       <div className="login-form">
         <div className="title">Sign In</div>
         {isSubmitted ? <div>ppppppppppp
-          {/* <BrowserRouter>
+          <People />
+          <BrowserRouter>
+            {/*           
+      <nav>
+        <NavLink to="/src/components/Registration">People</NavLink>
+        <NavLink to="/src/components/Profile">Profile</NavLink>
+      </nav> */}
             <Routes>
-              <Route path="../Registration/People" element={<People />} />
+              <Route path="/src/components/Registration/" element={<People />} />
             </Routes>
-          </BrowserRouter> */}
+          </BrowserRouter>
         </div> : renderForm}
       </div>
     </div>
